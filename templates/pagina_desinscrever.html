@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/bitcoin_icon_transparent.png') }}" type="image/x-icon">
+
+    <title>Cancelar Assinatura - BitJoin</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style_desinscrever.css')}}">
+</head>
+<body>
+
+    <header>
+        <h1>Cancelar Assinatura de Notificações</h1>
+        <div id="estilo_h1_p">
+            <div id="menu"> 
+                <a href="/"> | Pagina de Cotacoes | </a>
+                <a href="/news"> | Principais Noticias | </a>
+                <a href="/cadastro">| Cadastro | </a>
+                <a href="/desinscrever"> | Desinscrever | </a> 
+                <a href="/quemSomos"> | Quem Somos | </a> 
+                <a href="/faq"> | Perguntas Frequentes | </a> 
+
+
+            </div>
+    </header>
+
+    <main id="Main_id">
+
+        
+        <form id="Conteudo_form" method="POST" action="">
+            <h4>Insira e verifique seu e-mail para cancelar nossos serviços</h4>
+            <label id="texto_email" for="email">Email:</label>
+            <input id="email" placeholder="Insira o seu email" type="email" name="email" required>
+            <div id="email_invalido"> 
+                <p id="Mensagem"> qrtgerhgergergerger </p>
+            </div>
+            
+
+            <div class="content">
+                <button id="botao_form" onclick="ExecutarPopUp()" type="submit">Continuar</button>
+            </div>
+        </form> 
+    </main>
+
+    <!-- Pop-up de Confirmação de Código -->
+    <div id="popup_codigo" class="popup">
+        <h1>Insira o Código Enviado</h1>
+        <p>Enviamos um código de 6 dígitos para o seu e-mail.</p>
+        
+        <form id="Formulario_pop" action="" method="POST">
+
+            <input style="color: black;text-align: center;" id="codigo" placeholder="Insira Seu codigo numerico aqui" type="number" name="codigo" required>
+            <div id="Codigo_email_poup"> 
+                <p id="Mensagem_email"> </p>
+            </div>
+            <div id="botoes"> 
+                <button id="botao_cancelar" type="button" onclick="popupClose()">Cancelar</button>
+                <button id="botao_confirmar" type="button" onclick="Verificar_codigo()">Confirmar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- pop up -->
+    <div id="popup_yes1" class="popup">
+        <h1>A confirmacao foi realizada com Sucesso!</h1>
+        <p>Seu cadastro foi Excluido com sucesso</p>
+        <button id="btn1" type="button" onclick="Sair()">OK</button>
+    </div>
+
+    
+    <footer>
+        <p>© 2024 Projeto BitJoin. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+            document.getElementById('email').addEventListener('click', function(event) {
+            document.getElementById("email_invalido").style.visibility = "hidden"
+                  })
+                  
+            document.getElementById('codigo').addEventListener('click', function(event) {
+            document.getElementById("Codigo_email_poup").style.visibility = "hidden"
+            
+                  })
+
+
+
+            document.getElementById('Conteudo_form').addEventListener('submit', function(event) {
+            event.preventDefault();
+                  })
+            
+            function Verificar_codigo(){
+                let codigo_verificacao = document.getElementById("codigo").value
+                if(codigo_verificacao.length !== 6){
+                    return Mostrar_erro_codigos("codigo invalido")
+                }
+                try {
+                    Number.parseInt(codigo_verificacao) + 5
+                    return Enviar_Codigo()
+                } catch (error) {
+                    return Mostrar_erro_codigos("Insira somente numeros")
+                }
+            function Enviar_Codigo(){
+                let codigo__ = document.getElementById("codigo").value
+                let email__ = document.getElementById("email").value
+                let FormDd = new FormData()
+                FormDd.append("codigo",codigo__)
+                FormDd.append("email",email__)
+                fetch("/codigo/VerificarCodigo", {
+                    method : "POST",
+                    body:FormDd })
+                .then(data => {
+                    if (!data.ok){
+                        data.text().then(dados => {
+                            if (dados != "Sucesso"){
+                                Mostrar_erro_codigos(dados)
+                            }
+                        })
+                            }
+                    else{
+                        Mostrar_pop_up_final()
+                    }
+                })
+            }
+            }
+            function ExecutarPopUp(){
+                let emailText = document.getElementById("email").value
+                if (emailText.length <= 5){
+                    return ShowErrorPopup("E-mail inválido inserido.")
+                }
+                if(!emailText.includes("@") ){
+                    return ShowErrorPopup("E-mail inválido inserido.")
+                }
+                if(!emailText.includes(".com") ){
+                    return ShowErrorPopup("E-mail inválido inserido.")
+                }
+                if(!emailText.includes(".") ){
+                    return ShowErrorPopup("E-mail inválido inserido.")
+                }
+                else{           
+
+                    const formData = new FormData(document.getElementById("Conteudo_form"))
+                    fetch('/codigo/EnviarCodigo', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(dados => {
+                            return dados})
+
+                        .then(resposta => { 
+                            if(!resposta.ok){
+                                resposta.text().then(valor => {
+                                    if(valor != "Sucesso"){
+                                    
+                                    ShowErrorPopup(valor)
+                                }
+                                })
+                                }
+                
+                            else{
+                                showPopup()
+                                }})
+                            
+
+                        .catch(message => {
+                                ShowErrorPopup(message.value)
+                        })
+                    }}
+    
+    
+                    // Funções para exibir e fechar os pop-ups
+
+            function showPopup() {
+                document.getElementById('popup_codigo').style.visibility = "visible";
+                document.getElementById('Main_id').style.opacity = "0.5";
+            }
+
+            function popupClose() {
+                document.getElementById('popup_codigo').style.visibility = "hidden";
+                document.getElementById('Main_id').style.opacity = "1.0";
+                location.reload()
+            }
+
+            function closeErrorPopup() {
+                document.getElementById('popup_no1').style.visibility = "hidden";
+                document.getElementById('Main_id').style.opacity = "1.0";
+            }
+            function ShowErrorPopup(texto) {
+            document.getElementById("Mensagem").textContent = texto
+            document.getElementById('email_invalido').style.visibility = "visible";
+
+        }
+            function Mostrar_erro_codigos(mensagem){
+            document.getElementById("Mensagem_email").textContent = mensagem
+            document.getElementById("Codigo_email_poup").style.visibility = "visible"
+
+
+            }
+            function Sair(){
+            location.reload()
+            window.location.href = "/"
+        }
+            function Mostrar_pop_up_final(){
+                let popup = document.getElementById("popup_yes1")
+                popup.style.visibility = "visible"
+            }
+ </script>
+</body>
+</html>

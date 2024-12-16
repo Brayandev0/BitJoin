@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 50vw;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header p{
+    margin-bottom: 40px;
+}
+header a{
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7931a;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    color: white;
+}
+#github-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.github-item {
+    text-align: center;
+}
+
+.github-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.1);
+}
+
+#bitcoin_icone {
+    width: 5vw;
+
+    left: 63%;
+    margin-top: 10px;
+    position: absolute;
+    top: -1%;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+#menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+    gap: 10px; /* Espaçamento entre os links */
+    font-size: 14px; /* Tamanho de fonte padrão */
+    margin-top: 10px;
+}
+
+#menu a {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 1rem; /* Alternativamente, pode ser 12px */
+    color: white;
+    background-color: #ce780f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#menu a:hover {
+    background-color: #e07b12;
+    transform: scale(1.05);
+}
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 650px;
+    height: 330px;
+    max-width: 90%;
+}
+
+.box img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.box :hover{
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.content {
+    text-align:center;
+    padding: 50px;
+}
+.content a {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #f7931a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.content a:hover {
+    background-color: #e07b12;
+    transform: scale(1.05);
+
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #bitcoin_icone{
+        visibility: hidden;
+    }
+    .box {
+        width: 70%;
+    }
+
+    .box img {
+        width: 80px;
+    }
+    header p{
+        margin-bottom: 30px;
+    }
+    header a{
+        padding: 3px;
+        text-decoration: none;
+        color: white;
+    }
+    .content a {
+        display: inline-block;
+        position: absolute;
+        top: 369vw;
+        right: 25%;
+        padding: 10px 20px;
+        background-color: #f7931a;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+
+    .content a:hover {
+        background-color: #e07b12;
+        transform: scale(1.05);
+
+    }
+
+}
+@media (max-width: 768px){
+    .box{
+        width: auto;
+        height: auto;
+
+    }
+}

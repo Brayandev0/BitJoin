@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/bitcoin_icon_transparent.png') }}" type="image/x-icon">
+
+    <title>BitJoin Cotacoes</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+    <header>
+        <div id="estilo_h1_p">
+            <h1>Bem-vindo ao BitJoin Info</h1>
+            <p>A principal fonte de informações sobre Moedas</p>
+            <div id="menu"> 
+                <a href="/"> | Pagina de Cotacoes | </a>
+                <a href="/news"> | Principais Noticias | </a>
+                <a href="/cadastro">| Cadastro | </a>
+                <a href="/desinscrever"> | Desinscrever | </a> 
+                <a href="/quemSomos"> | Quem Somos | </a> 
+                <a href="/faq"> | Perguntas Frequentes | </a> 
+
+
+            </div>
+        </div>
+        <img id="bitcoin_icone" src="{{url_for('static',filename='images/bitcoin20.png')}}" alt="Bitcoin">
+    </header>
+
+    <div class="container">
+        <!-- Bloco de cotação do Bitcoin -->
+        <div class="box">
+            <img id="bitcoin_image" src="{{url_for('static',filename='images/bitcoin_main.png')}}" alt="">
+            <h3>Cotação Atual do Bitcoin</h3>
+            <p><strong>Valor atual:</strong> {{btc_bid}} R$</p>
+            <p><strong>Valor máximo hoje:</strong> {{btc_max}} R$</p>
+            <p><strong>Maior baixa hoje:</strong> {{btc_min}} R$</p>
+            <p><small>Última atualização: {{Horario}}</small></p>
+        </div>
+        <!-- Bloco de cotação do Ethereum -->
+        <div class="box">
+            <img id="etherum_imagem" src="{{url_for('static',filename='images/etherum.jpg')}}" alt="">
+            <h3>Cotação Atual do Ethereum</h3>
+            <p><strong>Valor atual:</strong> {{eth_bid}} R$</p>
+            <p><strong>Valor máximo hoje:</strong> {{eth_max}} R$</p>
+            <p><strong>Maior baixa hoje:</strong> {{eth_low}} R$</p>
+            <p><small>Última atualização: {{Horario}}</small></p>
+        </div>
+        <!-- Bloco de cotação do Dólar -->
+        <div class="box">
+            <img id="dolar_image" src="{{url_for('static',filename='images/dolar.png')}}" alt="">
+            <h3>Cotação Atual do Dólar</h3>
+            <p><strong>Valor atual:</strong> {{dolar_bid}} R$</p>
+            <p><strong>Valor máximo hoje:</strong> {{dolar_high}} R$</p>
+            <p><strong>Maior baixa hoje:</strong> {{dolar_low}} R$</p>
+            <p><small>Última atualização: {{Horario}}</small></p>
+        </div>
+        <!-- Bloco de cotação do Euro -->
+        <div id="Euro" class="box">
+            <img id="euro_image" src="{{url_for('static',filename='images/Euro.png')}}" alt="">
+            <div id="Texto_euro"> 
+            <h3>Cotação Atual do Euro</h3>
+            <p><strong>Valor atual:</strong> {{euro_bid}} R$</p>
+            <p><strong>Valor máximo hoje:</strong> {{euro_max}} R$</p>
+            <p><strong>Maior baixa hoje:</strong> {{euro_min}} R$</p>
+            <p><small>Última atualização: {{Horario}}</small></p>
+        </div>
+        </div>
+        <!-- Bloco de cotação do Dogecoin -->
+        <div id="Dogecoin" class="box">
+            <img id="doge_image" src="{{url_for('static',filename='images/dogecoin.png')}}" alt="">
+            <h3>Cotação Atual do Dogecoin</h3>
+            <p><strong>Valor atual:</strong> {{doge_bid}} R$</p>
+            <p><strong>Valor máximo hoje:</strong> {{doge_max}} R$</p>
+            <p><strong>Maior baixa hoje:</strong> {{doge_min}} R$</p>
+            <p><small>Última atualização: {{Horario}}</small></p>
+        </div>
+
+    </div>
+    
+    
+    <!-- Seção de cadastro -->
+    <div class="content">
+        <p>Cadastre-se para receber a cotação do Bitcoin todos os dias por email</p>
+        <a href="/cadastro">Clique Aqui para se cadastrar</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Projeto BitJoin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿Consulta Completa de CPF
+
+CPF: 27579654253
+CNS: 703409839185700
+RG: 
+Nome: ROSANIA MARROCOS DIAS
+Sexo: Feminino
+Nascimento: 10/03/1957
+Raça/Cor: PARDA
+Estado Civil: Não informado
+Nacionalidade: Não informado
+Renda: R$ 1.256,00
+Escolaridade: FUNDAMENTAL COMPLETO
+Profissão: 
+
+Filiação:
+  Mãe: MARIA MARROCOS DIAS
+  Pai: JOSE MARROCOS DA SILVA
+
+Óbito:
+  Status: Não
+  Data de Óbito: Não informado
+
+Situação Cadastral:
+  Código: 2
+  Descrição: REGULAR
+  Data: 14/12/2019
+
+Score:
+  Score CSB: 661
+  Faixa de Risco CSB: BAIXO
+  Score CSBA: 756
+  Faixa de Risco CSBA: BAIXISSIMO RISCO
+
+Perfil Serasa Mosaic:
+  Código: G26
+  Classe: 
+  Descrição: 
+  Novo Código: H27
+  Nova Classe: Massa Trabalhadora Urbana
+  Nova Descrição: Prestadores de serviços nas regiões metropolitanas
+
+Poder Aquisitivo:
+  Código: 3
+  Descrição: MEDIO BAIXO
+  Renda Estimada: R$ 1.256,00
+  Faixa: De R$ 1018 até R$ 1630
+
+Título de Eleitor:
+  Número: 6511372267
+  Zona: Não informado
+  Seção: Não informado
+
+Carteira de Trabalho:
+  Número: 
+  Série: 
+  Ano de Cadastro: 
+
+Certidões: Nenhuma certidão encontrada.
+
+Emails:
+
+Telefones:
+- Telefone: 92991177479, Tipo: não consta, Operadora: não consta, WhatsApp: Não
+
+- Telefone: 92981686332, Tipo: não consta, Operadora: não consta, WhatsApp: Não
+
+- Telefone: 92991187479, Tipo: não consta, Operadora: não consta, WhatsApp: Não
+
+- Telefone: 92981686332, Tipo: não consta, Operadora: TIM - CELULAR, WhatsApp: Não
+
+- Telefone: 9232487718, Tipo: 1, Operadora: não consta, WhatsApp: Não
+
+- Telefone: 9232486352, Tipo: 1, Operadora: não consta, WhatsApp: Não
+
+- Telefone: 92981686332, Tipo: 3, Operadora: não consta, WhatsApp: Não
+
+
+Endereços:
+- Tipo: RUA, Logradouro: FERNANDO CORTEZ, Número: 435, Complemento: N/A, Bairro: JORGE TEIXEIRA, Cidade: MANAUS, UF: AM, CEP: 69088024
+
+- Tipo: R, Logradouro: WALDEMIR CORDEIRO, Número: 303, Complemento: N/A, Bairro: ALVORADA, Cidade: MANAUS, UF: AM, CEP: 69042160
+
+- Tipo: R, Logradouro: MANGARATAIA, Número: 231, Complemento: N/A, Bairro: JORGE TEIXEIRA, Cidade: MANAUS, UF: AM, CEP: 69088444
+
+
+Parentes:
+- Nome: MARIA MARROCOS DIAS, CPF: Não informado, Grau de Parentesco: MAE
+
+
+Empregos:
+
+Compras:
+
+Vacinas:
+- Dose: 3ª Dose, Vacina: COVID-19 PFIZER - COMIRNATY, Lote: 32010BD, Fabricante: PFIZER, Data: 10/12/2021, Estabelecimento: USF MJ PM SALVIO BELOTA
+
+- Dose: 1ª Dose, Vacina: COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD, Lote: 4120Z025, Fabricante: ASTRAZENECA/FIOCRUZ, Data: 10/03/2021, Estabelecimento: USF MJ PM SALVIO BELOTA
+
+- Dose: 2ª Dose, Vacina: COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD, Lote: 214VCD070W, Fabricante: ASTRAZENECA/FIOCRUZ, Data: 02/06/2021, Estabelecimento: USF MJ PM SALVIO BELOTA
+
+
+Interesses:
+- creditoPessoalPreAprovado: Não
+- creditoImobiliarioPreAprovado: Sim
+- financiamentoDeVeiculoPreAprovado: Sim
+- classeMedia: Não
+- debitoAutmatico: Sim
+- possuiLuxo: Sim
+- possuiInvestimentos: Não
+- possuiCartaoDeCredito: Sim
+- possuiMultiplosCartoes: Sim
+- possuiContaAltoPadrao: Não
+- possuiCartaoBlack: Não
+- possuiCartaoPrime: Não
+- possuiCelularPrePago: Não
+- possuiCelularPosPago: Não
+- possuiMilhasAcumuladas: Sim
+- possuiCasaPropria: Não
+- possuiDescontos: Sim
+- possuiContasCorrentes: Não
+- possuiSeguroAutomotivo: Não
+- possuiPrevidenciaPrivada: Não
+- possuiInternetBanking: Sim
+- possuiTokenInstalado: Sim
+- realizouViagens: Não
+- creditoPessoal: 26%
+- financiamentoVeiculo: 86%
+- compraInternet: 32%
+- multiplosCartoes: 56%
+- cartaoPrime: 19%
+- tvCabo: 71%
+- bandaLarga: 23%
+- casaPropria: 30%
+- celularPrePago: 46%
+- celularPosPago: 19%
+- creditoMobiliario: 28%
+- seguroAutomotivo: 10%
+- seguroSaude: 10%
+- seguroVida: 34%
+- seguroResidencial: 17%
+- investimentos: 43%
+- consignado: 67%
+- previdenciaPrivada: 15%
+- resgateMilhas: 41%
+- cacadorDescontos: 50%
+- fitness: 39%
+- turismo: 25%
+- luxo: 8%
+- cinefilo: 22%
+- transportePublico: 55%
+- jogosOnline: 21%
+- videoGame: 29%
+- earlyAdopters: 23%

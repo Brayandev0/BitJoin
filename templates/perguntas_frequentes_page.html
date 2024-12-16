@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/bitcoin_icon_transparent.png') }}" type="image/x-icon">
+    <title>BitJoin Cotações</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style-faq.css')}}">
+</head>
+<body>
+    <header>
+        <div id="estilo_h1_p">
+            <h1>Bem-vindo ao BitJoin Info</h1>
+            <p>A principal fonte de informações sobre Moedas</p>
+            <div id="menu"> 
+                <a href="/"> | Pagina de Cotacoes | </a>
+
+                <a href="/news"> | Principais Notícias | </a>
+                <a href="/cadastro">| Cadastro | </a>
+                <a href="/desinscrever"> | Desinscrever | </a> 
+                <a href="/quemSomos"> | Quem Somos | </a> 
+                <a href="/faq"> | Perguntas Frequentes | </a> 
+            </div>
+        </div>
+        <img id="bitcoin_icone" src="{{url_for('static',filename='images/bitcoin20.png')}}" alt="Bitcoin">
+    </header>
+
+    <div class="container">
+        <!-- Bloco de cotação do Bitcoin -->
+        <div class="box">
+            <h3 style="align-items: top; margin-bottom: 30px;">Perguntas Frequentes</h3>
+
+        <section> 
+            <details>
+                <summary> Quais servicos Nos fornecemos ? </summary>
+                <p>Nós, da BitJoin, oferecemos um serviço completo de acompanhamento das principais moedas e ativos digitais. Enviamos diariamente, ao final do dia, um resumo detalhado da cotação do Bitcoin por e-mail, além de disponibilizarmos atualizações sobre as cotações e notícias mais relevantes das principais criptomoedas. </p>
+
+            </details>
+                <details> 
+                <summary>Como posso entrar em contato com a equipe BitJoin ?</summary>
+                <p>Você pode entrar em contato conosco através do nosso e-mail de serviço: service.bitjoin@gmail.com. Nosso atendimento de suporte está disponível de segunda a sexta-feira, das 7h às 18h.</p>
+            </details>
+            <details>
+                <summary>Oque e o projeto BitJoin</summary>
+                <p>O projeto BitJoin e um site de testes feito para desenvolver nossas habilidades, o site e 100% funcional e atualizado</p>
+                
+            </details>
+            <details>
+                <summary> Quando as cotacoes de moedas atualizam ?</summary>
+                <p>Todas as nossas cotações de moedas são atualizadas diariamente para garantir informações precisas e confiáveis. A cotação principal do site é atualizada a cada 5 minutos, enquanto as notícias são renovadas uma vez por dia. Além disso, enviamos diariamente, às 18h, um resumo detalhado da cotação do Bitcoin no momento.</p>
+            </details>
+        </section>
+
+        </div>
+
+
+    <footer>
+        <p>© 2024 Projeto BitJoin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

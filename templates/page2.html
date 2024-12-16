@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/bitcoin_icon_transparent.png') }}" type="image/x-icon">
+    <title>Cadastro - BitJoin</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+</head>
+<body>
+
+    <header>
+        <h1 style="margin-bottom: 30px;" >Cadastre-se!</h1>
+        <div id="menu"> 
+            <a href="/"> | Pagina de Cotacoes | </a>
+
+            <a href="/news"> | Principais Noticias | </a>
+            <a href="/cadastro">| Cadastro | </a>
+            <a href="/desinscrever"> | Desinscrever | </a> 
+            <a href="/quemSomos"> | Quem Somos | </a> 
+            <a href="/faq"> | Perguntas Frequentes | </a> 
+
+
+        </div>
+    </header>
+    <main id="Main_id">
+        <div id="Conteudo_form"> 
+        <h2>Insira Seus dados <br> para se cadastrar</h2>
+        <form id="meuForm" method="POST">
+            <label for="nome">Nome :</label>
+            <input id="Nome_input" placeholder="Insira seu nome aqui" type="text" name="nome" required>
+            <br>
+
+            <label for="email">E-mail :</label>
+            <input id="Email_input" placeholder="Insira seu melhor E-mail" type="email" name="email" required>
+            <br>
+
+            <div class="content">
+                <button type="submit">Cadastrar</button>
+            </div>
+       </form> 
+    </div>
+    </main>
+
+    <!-- pop up -->
+    <div id="popup_yes1" class="popup">
+        <h1>Parabéns!</h1>
+        <p>Seu cadastro foi realizado com sucesso</p>
+        <button id="btn1" type="button" onclick="sair()">OK</button>
+    </div>
+
+    <div id="popup_no1" class="popup">
+        <h1>Erro!</h1>
+        <p id="Mensagem_erro"></p>
+        <button id="btn2" type="button" onclick="popup_close()">Ok</button>
+    </div>
+
+<script>
+    document.getElementById('meuForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão
+
+        // Coleta os dados do formulário
+        const form = document.getElementById('meuForm');
+        const formData = new FormData(form);
+
+        fetch('/Enviar', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+
+                // Se a resposta não for "ok", trata o erro retornado pelo servidor
+                if (response != "Sucesso")
+                    return response.text().then(errorMessage => {
+                        throw new Error(errorMessage); // Lança o erro para ser tratado no catch
+                    });
+            }
+            return popup_open(true);  // Caso contrário, retorna o texto de sucesso ou outra mensagem
+        })
+        .catch(error => {
+
+            // Exibe o erro específico que veio do servidor
+            document.getElementById("Mensagem_erro").textContent = error.message;
+            popup_open(false);  // Exibe o pop-up de erro
+        });
+    });
+    function sair(){
+        location.reload()    
+        window.location.href = "/"    
+    }
+    let popupyes = document.getElementById('popup_yes1');
+    let popupno = document.getElementById('popup_no1');
+    let conteudo = document.getElementById('Main_id');
+
+    function popup_open(success) {
+        if (success) {
+            popupyes.style.visibility = "visible";
+            conteudo.style.opacity = "0.5";
+        } else {
+            popupno.style.visibility = "visible";
+            conteudo.style.opacity = "0.5";
+        }
+    }
+
+    function popup_close() {
+        popupyes.style.visibility = "hidden";
+        popupno.style.visibility = "hidden";
+        conteudo.style.opacity = "1";
+    }
+</script>
+
+
+    <footer>
+        <p>© 2024 Projeto BitJoin. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
