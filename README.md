@@ -4,7 +4,7 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 
 ## Tela Principal 
 ![image](https://github.com/user-attachments/assets/e264a17d-34a2-45f9-93ca-6400e088e34b)
-**Informacoes**
+## Informacoes 
 Todas as cotacoes desta pagina se atualizam a cada 5 minutos e os dados sao salvos em cache, isso faz a pagina ter uma maior rapidez e velocidade nas respostas ao usuario, a pagina possui um tempo de resposta sem os dados em cache de 0.65 milisegundos
 e com os dados em cache o tempo de resposta e de 40 milisegundos,os dados em cache sao substituidos a cada 5 minutos 
 
