@@ -4,7 +4,8 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 
 ## Tela Principal 
 ![image](https://github.com/user-attachments/assets/e264a17d-34a2-45f9-93ca-6400e088e34b)
-.
+
+
 
 
 
