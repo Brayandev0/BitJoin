@@ -3,7 +3,7 @@ O projeto BitJoin e um site de criptoativos e moedas em geral,O principal objeti
 Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cotacao do bitcoin
 
 ## Pagina de cotacoes
-![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)
+![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582) | ![image](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453)
 
 **Servidor**
 - Todas as cotacoes de moedas atualizam a cada 3 minutos
@@ -16,7 +16,7 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 - Os blocos de cotacao tambem sao responsivos e aumentam 0.5% quando o usuario passa o mouse por cima
 - A pagina possui adaptacao para dispositivos menores
 - Ao clicar no botao o usuario sera levado para ```/cadastro```
-![image](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453)
+
 
 ## Pagina de noticias
 ![image](https://github.com/user-attachments/assets/32f92400-1adf-47c7-96d1-a1db9c7f9f28)
