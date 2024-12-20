@@ -44,7 +44,10 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 - O width do box onde as noticias estao se adapta ao tamanho do texto
 - Os titulos e descricoes tambem possuem um metodo hover que aumenta o tamanho em 1.05 para quando o usuario passar o mouse
 - O campo onde esta o link usa o metodo target = blank,Isso significa que ao clicar no link abrira uma aba adicional e o usuario ficara no site
-- A pagina possui adaptacao para dispositivos menores
+- A pagina possui adaptacao para dispositivos menores.
+  
 
 **Pagina para dispositivos menores**
+
+
 ![image](https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318)
