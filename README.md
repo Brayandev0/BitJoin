@@ -21,7 +21,8 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 
 
 ## Pagina de noticias
-![image](https://github.com/user-attachments/assets/32f92400-1adf-47c7-96d1-a1db9c7f9f28)
+![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)
+
 
 **Servidor**
 - Todas as noticias Sao armazenadas em cache, aumentando a velocidade de resposta da pagina
