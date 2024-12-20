@@ -15,8 +15,12 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 - Todos os botoes possuem um metodo hover que aumenta 0.5% o tamanho do botao quando o usuario passa o mouse por cima e deixa a cor do botao escura
 - Os blocos de cotacao tambem sao responsivos e aumentam 0.5% quando o usuario passa o mouse por cima
 - A pagina possui adaptacao para dispositivos menores
-- Ao clicar no botao o usuario sera levado para ```/cadastro```
-**Pagina Para Dispositivos menores**
+- Ao clicar no botao o usuario sera levado para ```/cadastro```.
+
+  
+**Pagina Para Dispositivos menores**.
+
+
   ![image](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453)
 
 
