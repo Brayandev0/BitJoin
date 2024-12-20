@@ -83,8 +83,7 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 
 
   **Pop Ups**
-  ||![image](https://github.com/user-attachments/assets/c9aa358e-256f-4ab7-a950-525598055bc6) |![Imagem 2](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453) |
+| ![Imagem 1](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582) | ![Imagem 2](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453) |
 |----------------------------------------------------------|----------------------------------------------------------|
-| Sucesso                           | Usuario ja cadastrado                                    |
-
+| Sucesso                                    | Usuario ja cadastrado                                    |
 
