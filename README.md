@@ -3,8 +3,9 @@ O projeto BitJoin e um site de criptoativos e moedas em geral,O principal objeti
 Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cotacao do bitcoin
 
 
-## Pagina de cotacoes ( / )
+## Pagina de cotacoes 
 ![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582) 
+- /
 **Servidor**
 - Todas as cotacoes de moedas atualizam a cada 3 minutos
 - Os dados da cotacao sao armazenados em cache e substituidos a cada 3 minutos, servindo o usuario final com maior velocidade de resposta
@@ -24,9 +25,9 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
   ![image](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453)
 
 
-## Pagina de noticias ( /news ) 
+## Pagina de noticias 
 ![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)
-
+- /news
 
 **Servidor**
 - Todas as noticias Sao armazenadas em cache, aumentando a velocidade de resposta da pagina
@@ -48,6 +49,16 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
   
 
 **Pagina para dispositivos menores**
-
-
 ![image](https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318)
+
+## Pagina de Cadastro ( / )
+![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)
+- /cadastro
+
+**Servidor**
+- Quando o Servidor recebe os dados enviados ele trata e verifica se os dados sao validos, caso seja invalido ele retornara um erro que sera retornado como popup
+- O servidor verifica se o email do usuario ja esta cadastrado , se estiver ele retorna um erro
+- Quando os dados Sao validos o Servidor retorna o codigo 200 e inicia uma Threading para salvar o usuario na db e enviar o email de boas vindas
+- Quando o Usuario e salvo ele recebe um Email de boas vindas automaticamente
+- Ao receber os dados o servidor verifica se o email possui @ e .com
+- Ele tambem verifica se os dados possuem caracteres especiais como ( % * / (  # ` ) se possuirem os dados serao rejeitados 
