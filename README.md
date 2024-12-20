@@ -78,14 +78,15 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
  
 **Página para Dispositivos Menores**
 
-<img src="https://github.com/user-attachments/assets/b27ab07d-c229-492f-92d1-873fa892a1d8" alt="Página para dispositivos menores" width="600" />
 
+![397858933-b27ab07d-c229-492f-92d1-873fa892a1d8](https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21)
 ---
 
-## Pop-Ups
+**Pop-Ups**
 
-| **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      |
-|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> |
+| **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      | **Dados Inavlidos**
+|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="![image](https://github.com/user-attachments/assets/9d8507fb-1f99-420c-bac6-c57e2a478bed)" alt="Pop up dados invalidos" width="300" />
+
 
 ---
