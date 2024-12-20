@@ -49,6 +49,9 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
   
 
 **Pagina para dispositivos menores**
+
+
+
 ![image](https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318)
 
 ## Pagina de Cadastro ( / )
@@ -61,4 +64,27 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 - Quando os dados Sao validos o Servidor retorna o codigo 200 e inicia uma Threading para salvar o usuario na db e enviar o email de boas vindas
 - Quando o Usuario e salvo ele recebe um Email de boas vindas automaticamente
 - Ao receber os dados o servidor verifica se o email possui @ e .com
-- Ele tambem verifica se os dados possuem caracteres especiais como ( % * / (  # ` ) se possuirem os dados serao rejeitados 
+- Ele tambem verifica se os dados possuem caracteres especiais como ( % * / (  # ` ) se possuirem os dados serao rejeitados
+- Tempo de Resposta 0.39 ms
+
+  **Layout**
+  - Adicionei um Script em js que verifica se os dados sao validos antes de enviar para o backend, caso os dados sejam invalidos sera retornado um erro pelo proprio navegador
+  - Apos o Usuario se cadastrar, e a resposta do backend for de sucesso, Um pop up de Sucesso sera levantado
+  - Caso o Usuario ja esteja cadastrado,O backend informara o erro e sera levantado um pop up de erro
+  - Quando o usuario Passa o mouse no botao o botao aumentara a scala em 1.05
+  - Foi colocado Placeholders nos campos para maior visibilidade
+  - Apos o pop up de sucesso ser levantado o usuario e redirecionado para a pagina / e os inputs sao reiniciados
+  - A pagina possui adaptacao para dispositivos menores.
+ 
+    **Pagina para dispositivos menores**
+
+
+  ![image](https://github.com/user-attachments/assets/b27ab07d-c229-492f-92d1-873fa892a1d8)
+
+
+  **Pop Ups**
+  ||![image](https://github.com/user-attachments/assets/c9aa358e-256f-4ab7-a950-525598055bc6) |![Imagem 2](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453) |
+|----------------------------------------------------------|----------------------------------------------------------|
+| Sucesso                           | Usuario ja cadastrado                                    |
+
+
