@@ -76,14 +76,16 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
   - Apos o pop up de sucesso ser levantado o usuario e redirecionado para a pagina / e os inputs sao reiniciados
   - A pagina possui adaptacao para dispositivos menores.
  
-    **Pagina para dispositivos menores**
+**Página para Dispositivos Menores**
 
+<img src="https://github.com/user-attachments/assets/b27ab07d-c229-492f-92d1-873fa892a1d8" alt="Página para dispositivos menores" width="600" />
 
-  ![image](https://github.com/user-attachments/assets/b27ab07d-c229-492f-92d1-873fa892a1d8)
+---
 
+## Pop-Ups
 
-  **Pop Ups**
-| ![image](https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162) | ![image](https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881) | 
-|----------------------------------------------------------|----------------------------------------------------------|
-| Sucesso                                    | Usuario ja cadastrado                                    |
+| **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      |
+|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> |
 
+---
