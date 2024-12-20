@@ -86,7 +86,7 @@ Todos os dias as 6 e 25 e enviado a todos os emails cadastrados um resumo da cot
 
 | **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      | **Dados Invalidos**
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
-| <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="(https://github.com/user-attachments/assets/d5e0db0a-e5d1-4039-b8d2-5928ef40c2bb)" alt="Pop up dados invalidos" width="300" />
+| <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/d5e0db0a-e5d1-4039-b8d2-5928ef40c2bb" alt="Pop up dados invalidos" width="300" />
 
 
 ---
