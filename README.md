@@ -5,6 +5,7 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 ## Página de Cotações  
 ![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)  
 
+Esta Pagina Mostra as cotacoes das moedas atualizadas
 - /  
 
 **Servidor**  
@@ -26,6 +27,7 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 ## Página de Notícias  
 ![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)  
 
+Esta pagina mostra e disponibiliza as noticias mais recentes 
 - /news  
 
 **Servidor**  
@@ -53,18 +55,22 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 ## Página de Cadastro ( / )  
 ![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)  
 
-- /cadastro  
+ESta pagina permite o usuario cadastrar o email para receber os email com o resumo do bitcoin
+- /cadastro
+  
 
 **Servidor**  
 - Quando o servidor recebe os dados enviados, ele trata e verifica se os dados são válidos. Caso sejam inválidos, ele retorna um erro que será exibido como popup.  
 - O servidor verifica se o e-mail do usuário já está cadastrado. Se estiver, ele retorna um erro.  
 - Quando os dados são válidos, o servidor retorna o código 200 e inicia uma **Thread** para salvar o usuário na base de dados e enviar o e-mail de boas-vindas.  
 - Quando o usuário é salvo, ele recebe um e-mail de boas-vindas automaticamente.  
+- Tempo de resposta: 0.39 ms.
+  
+**Protecoes**
 - Ao receber os dados, o servidor verifica se o e-mail possui ```@``` e ```.com```.  
 - Ele também verifica se os dados possuem caracteres especiais como ```% * / ( # ` ```. Se possuírem, os dados serão rejeitados.
-- O retorno de erros nao e feito diretamente, mais sim retornados erros personalizados evitando assim vazamentos de informacao
 - Todos os inputs tem tratamento para a prevencao de qualquer tipo de injecao de codigo, e nada e executado diretamente, evitando falhas comuns como SqlInjection e Xss 
-- Tempo de resposta: 0.39 ms.  
+- O retorno de erros nao e feito diretamente, mais sim retornados erros personalizados evitando assim vazamentos de informacao
 
 **Layout**  
 - Adicionado um script em JS que verifica se os dados são válidos antes de enviar para o backend. Caso os dados sejam inválidos, será retornado um erro pelo próprio navegador.  
@@ -84,3 +90,35 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 | **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      | **Dados Inválidos**  
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|  
 | <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/d5e0db0a-e5d1-4039-b8d2-5928ef40c2bb" alt="Pop up dados inválidos" width="300" />  
+
+## Pagina Desinscrever
+![image](https://github.com/user-attachments/assets/711bbaf0-9f00-4d6e-bcc9-130172636cfa)
+## Remoção de Email do Banco de Dados
+
+Esta página permite que o usuário remova seu email do banco de dados.
+
+### **Servidor**
+- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```).
+- Essa página envia um email e gera um código aleatório de 6 dígitos.
+- Após o envio, verifica-se se o email existe no banco de dados e se é válido.
+- O código gerado possui um timeout de **30 minutos**.
+- Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```).
+- O código é salvo em uma lista de dicionários, onde o email é usado como chave.
+- Verificações realizadas:
+  - Se o email solicitado possui um código gerado. Caso contrário, retorna um erro: ```Código ou Email inválido```.
+  - Se o timeout do código é válido e o código está correto. Caso contrário, retorna um erro: ```Código Incorreto```.
+  - Se o email existe no banco de dados.
+  - Se o código tem exatamente 6 dígitos e contém apenas números inteiros.
+
+---
+
+### **Proteções**
+- **Prevenção contra vulnerabilidades:**
+  - Nenhum dado é passado diretamente, evitando vulnerabilidades como **SQL Injection** e **XSS**.
+- **Validações realizadas:**
+  - Todos os campos são tratados e verificados.
+  - O email só é considerado válido se possuir ```@```, ```.``` e ```.com``` e tiver mais de 5 caracteres.
+  - O código só é válido se possuir exatamente 6 caracteres numéricos.
+- **Tratamento de erros:**
+  - Todos os erros são retornados em mensagens amigáveis, sem vazamento de informações sensíveis.
+
