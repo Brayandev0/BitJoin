@@ -1,8 +1,10 @@
 ## Introdução  
 O projeto BitJoin é um site de criptoativos e moedas em geral. O principal objetivo do site BitJoin é fornecer as principais cotações e notícias sobre as principais criptomoedas, informando dentro do site e por e-mail.  
 Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da cotação do Bitcoin.
-
+<div align="center">
 ## Página de Cotações  
+</div>
+
 ![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)  
 GET ```/```
 Esta página exibe as cotações mais recentes das moedas.
@@ -81,8 +83,10 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
   <img src="https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318" alt="Página menor" />
 </div>
 
+<div align="center">
 
 ## Página de Cadastro ( / )  
+</div>
 ![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)  
 GET, POST ```/cadastro```
 Esta página permite que o usuário cadastre seu email para receber resumos sobre o Bitcoin.
@@ -135,8 +139,9 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 | **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      | **Dados Inválidos**  
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|  
 | <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/d5e0db0a-e5d1-4039-b8d2-5928ef40c2bb" alt="Pop up dados inválidos" width="300" />  
-
+<div align="center">
 ## Pagina Desinscrever
+</div>
 ![image](https://github.com/user-attachments/assets/711bbaf0-9f00-4d6e-bcc9-130172636cfa)
 
 Esta página permite que o usuário remova seu email do banco de dados.
