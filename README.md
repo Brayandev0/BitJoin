@@ -179,5 +179,5 @@ Esta página permite que o usuário remova seu email do banco de dados.
 **Pop-Ups**  
 
 | **Email invalido**                                                                                     | **Usuário nao esta cadastrado**                                                                      | **Insira o codigo de verificacao** 
-|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|--------------  
+|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
 | <img src="https://github.com/user-attachments/assets/a9cb6668-cd57-44c7-9c52-bfe51e44bc5e" alt="Email Invalido" width="300" /> | <img src="https://github.com/user-attachments/assets/e0fb2763-b7f8-490c-b11b-2bc4bfc98619" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/fda11ccd-f95a-42da-b6b6-72f0638885d2" alt="Insira o codigo de verificacao" width="300" /> 
