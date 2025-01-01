@@ -190,4 +190,6 @@ Esta página permite que o usuário remova seu email do banco de dados.
 | <img src="https://github.com/user-attachments/assets/c0200f30-bed4-4b74-8ded-525966aa8015" alt="Codigo Invalido" width="300" /> | <img src="https://github.com/user-attachments/assets/7c5fb64e-2f3b-4a0b-81ae-b39ccc96222e" alt="Codigo incorreto" width="300" /> | <img src="https://github.com/user-attachments/assets/13edca4a-624d-4ed3-a282-76c82d3e7dfd" alt="Sucesso" width="300" /> 
 
 ### **Pagina para dispositivos Menores**
-<img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="PAgina menor" align-items: center /> 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="Página menor" />
+</div>
