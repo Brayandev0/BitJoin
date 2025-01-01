@@ -29,10 +29,14 @@ Esta página exibe as cotações mais recentes das moedas.
 - **Redirecionamento:**
   - Ao clicar no botão, o usuário será levado para a página ```/cadastro```.
 
+<div align="center">
+  
+### **Página para dispositivos Menores**
 
-**Página para Dispositivos Menores**  
-
-![image](https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453)  
+</div>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453" alt="Página menor" />
+</div>
 
 ## Página de Notícias  
 ![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)  
@@ -68,11 +72,15 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
   - A página foi projetada para se ajustar perfeitamente a dispositivos menores.
 
 ---
+<div align="center">
+  
+### **Página para dispositivos Menores**
 
-### **Página para Dispositivos Menores**
-- O layout é responsivo, garantindo uma boa experiência em telas menores.
+</div>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318" alt="Página menor" />
+</div>
 
-![image](https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318)  
 
 ## Página de Cadastro ( / )  
 ![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)  
@@ -113,11 +121,14 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 - A página foi otimizada para adaptação em dispositivos menores.
 
 ---
+<div align="center">
+  
+### **Página para dispositivos Menores**
 
-### **Página para Dispositivos Menores**
-- O layout é responsivo, garantindo usabilidade em telas de diferentes tamanhos.
-
-![397858933-b27ab07d-c229-492f-92d1-873fa892a1d8](https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21)  
+</div>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21" alt="Página menor" />
+</div>
 
 **Pop-Ups**  
 
@@ -189,7 +200,11 @@ Esta página permite que o usuário remova seu email do banco de dados.
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
 | <img src="https://github.com/user-attachments/assets/c0200f30-bed4-4b74-8ded-525966aa8015" alt="Codigo Invalido" width="300" /> | <img src="https://github.com/user-attachments/assets/7c5fb64e-2f3b-4a0b-81ae-b39ccc96222e" alt="Codigo incorreto" width="300" /> | <img src="https://github.com/user-attachments/assets/13edca4a-624d-4ed3-a282-76c82d3e7dfd" alt="Sucesso" width="300" /> 
 
-### **Pagina para dispositivos Menores**
+<div align="center">
+  
+### **Página para dispositivos Menores**
+
+</div>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="Página menor" />
 </div>
