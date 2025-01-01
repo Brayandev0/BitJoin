@@ -137,6 +137,7 @@ Esta página permite que o usuário remova seu email do banco de dados.
 - O código gerado possui um timeout de **30 minutos**.
 - Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```).
 - O código é salvo em uma lista de dicionários, onde o email é usado como chave.
+- Caso o Timeout do codigo solicitado esteja expirado, ele e apagado automaticamente
 - Verificações realizadas:
   - As verificacoes Ocorrem no FrontEnd e no Backend
   - Se o email solicitado possui um código gerado. Caso contrário, retorna um erro: ```Código ou Email inválido```.
@@ -159,7 +160,8 @@ Esta página permite que o usuário remova seu email do banco de dados.
 ### **Layout**
 - **Botões**:
   - Possuem um efeito **hover** que aumenta a escala em **1.05** quando o mouse passa sobre eles e a cor ficam mais escura.
-- **Popup de Inserção de Código**:
+- **Popup de Inserir o Código**:
+  - Tem um place Holder ( ```Insira seu codigo numerico aqui```) 
   - Aparece apenas após o backend confirmar que o email é válido e o código foi enviado.
   - É responsivo e ajusta seu tamanho de acordo com o conteúdo.
   - Botões do popup possuem um efeito **hover** que aumenta a escala em **1.05**.
@@ -181,3 +183,8 @@ Esta página permite que o usuário remova seu email do banco de dados.
 | **Email invalido**                                                                                     | **Usuário nao esta cadastrado**                                                                      | **Insira o codigo de verificacao** 
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
 | <img src="https://github.com/user-attachments/assets/a9cb6668-cd57-44c7-9c52-bfe51e44bc5e" alt="Email Invalido" width="300" /> | <img src="https://github.com/user-attachments/assets/e0fb2763-b7f8-490c-b11b-2bc4bfc98619" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/fda11ccd-f95a-42da-b6b6-72f0638885d2" alt="Insira o codigo de verificacao" width="300" /> 
+
+
+| **Codigo invalido**                                                                                     | **Codigo incorreto**                                                                      | **Sucesso** 
+|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/c0200f30-bed4-4b74-8ded-525966aa8015" alt="Codigo Invalido" width="300" /> | <img src="https://github.com/user-attachments/assets/7c5fb64e-2f3b-4a0b-81ae-b39ccc96222e" alt="Codigo incorreto" width="300" /> | <img src="https://github.com/user-attachments/assets/13edca4a-624d-4ed3-a282-76c82d3e7dfd" alt="Sucesso" width="300" /> 
