@@ -1,9 +1,8 @@
 ## Introdução  
 O projeto BitJoin é um site de criptoativos e moedas em geral. O principal objetivo do site BitJoin é fornecer as principais cotações e notícias sobre as principais criptomoedas, informando dentro do site e por e-mail.  
 Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da cotação do Bitcoin.
-<div align="center">
+
 ## Página de Cotações  
-</div>
 
 ![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)  
 GET ```/```
@@ -83,10 +82,9 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
   <img src="https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318" alt="Página menor" />
 </div>
 
-<div align="center">
 
-## Página de Cadastro ( / )  
-</div>
+## Página de Cadastro  
+
 ![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)  
 GET, POST ```/cadastro```
 Esta página permite que o usuário cadastre seu email para receber resumos sobre o Bitcoin.
