@@ -155,16 +155,23 @@ Esta página permite que o usuário remova seu email do banco de dados.
   - O código só é válido se possuir exatamente 6 caracteres numéricos.
 - **Tratamento de erros:**
   - Todos os erros são retornados em mensagens amigáveis, sem vazamento de informações sensíveis.
-## Layout da Página
 
 ### **Layout**
-- O botão possui um efeito **hover** que aumenta a escala em **1.05** quando o mouse passa sobre ele.
-- O popup para inserir o código aparece somente após o backend confirmar que o email é válido e o código foi enviado.
-- O popup de verificação é responsivo e se adapta ao tamanho do conteúdo.
-- Os botões no popup de verificação possuem um efeito **hover** que aumenta a escala em **1.05**.
-- O sistema verifica se o email e o código são válidos.
-- O input do código é validado com **JavaScript**.
-- A mensagem de erro possui um efeito **hover** que a oculta quando o usuário clica no input.
-- Mensagens de erro retornadas pelo backend são exibidas no frontend.
-- Ao clicar no botão "Cancelar", todos os inputs são limpos e a página é reiniciada.
-- O popup final indica sucesso. Quando clicado, o usuário é redirecionado para a página padrão e a página é reiniciada.
+- **Botões**:
+  - Possuem um efeito **hover** que aumenta a escala em **1.05** quando o mouse passa sobre eles e a cor ficam mais escura.
+- **Popup de Inserção de Código**:
+  - Aparece apenas após o backend confirmar que o email é válido e o código foi enviado.
+  - É responsivo e ajusta seu tamanho de acordo com o conteúdo.
+  - Botões do popup possuem um efeito **hover** que aumenta a escala em **1.05**.
+- **Validações**:
+  - O sistema verifica se o email e o código são válidos.
+  - O input do código é validado diretamente com **JavaScript**.
+- **Mensagens de Erro**:
+  - Possuem um efeito **hover** que as oculta quando o usuário clica no input correspondente.
+  - As mensagens de erro do backend são exibidas de forma clara no frontend.
+- **Função Cancelar**:
+  - Ao clicar no botão "Cancelar", todos os inputs são limpos e a página é reiniciada.
+- **Popup Final de Sucesso**:
+  - Indica sucesso na operação.
+  - Quando clicado, o usuário é redirecionado para a página padrão e a página é reiniciada automaticamente.
+
