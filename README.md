@@ -4,21 +4,31 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 
 ## Página de Cotações  
 ![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)  
+GET ```/```
+Esta página exibe as cotações mais recentes das moedas.
 
-Esta Pagina Mostra as cotacoes das moedas atualizadas
-- /  
+---
 
-**Servidor**  
-- Todas as cotações de moedas são atualizadas a cada 3 minutos.  
-- Os dados da cotação são armazenados em cache e substituídos a cada 3 minutos, servindo o usuário final com maior velocidade de resposta.  
-- Tempo de resposta da página (cache): 0.40 ms.  
-- Tempo de resposta da página (sem cache): 0.65 ms.  
+### **Servidor**
+- As cotações de moedas são atualizadas a cada **3 minutos**.
+- Os dados são armazenados em **cache** e substituídos a cada 3 minutos, garantindo maior velocidade de resposta para o usuário.
+- **Tempo de resposta da página**:
+  - Com cache: **0.40 ms**.
+  - Sem cache: **0.65 ms**.
 
-**Layout**  
-- Todos os botões possuem um método hover que aumenta 0.5% o tamanho do botão quando o usuário passa o mouse por cima, além de deixar a cor do botão mais escura.  
-- Os blocos de cotação também são responsivos e aumentam 0.5% quando o usuário passa o mouse por cima.  
-- A página possui adaptação para dispositivos menores.  
-- Ao clicar no botão, o usuário será levado para ```/cadastro```.
+---
+
+### **Layout**
+- **Interatividade visual:**
+  - Todos os botões possuem um efeito hover que:
+    - Aumenta o tamanho em **0.5%**.
+    - Escurece a cor do botão.
+  - Os blocos de cotação também aumentam **0.5%** quando o mouse passa por cima.
+- **Responsividade:**
+  - A página é adaptada para dispositivos menores, garantindo uma boa experiência para todos os usuários.
+- **Redirecionamento:**
+  - Ao clicar no botão, o usuário será levado para a página ```/cadastro```.
+
 
 **Página para Dispositivos Menores**  
 
@@ -26,62 +36,86 @@ Esta Pagina Mostra as cotacoes das moedas atualizadas
 
 ## Página de Notícias  
 ![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)  
+GET ```/news```
+Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao mercado.
 
-Esta pagina mostra e disponibiliza as noticias mais recentes 
-- /news  
+---
 
-**Servidor**  
-- Todas as notícias são armazenadas em cache, aumentando a velocidade de resposta da página.  
-- As notícias são atualizadas a cada 1 dia.  
-- A descrição das notícias é limitada a 300 caracteres, para melhorar a visibilidade no front-end.  
-- Todas as notícias devem possuir keywords relacionadas às moedas.  
-- Todos os títulos, links e descrições devem ser obrigatoriamente válidos. Caso algum desses itens seja inválido, o servidor passa para a próxima notícia.  
-- Caso nenhuma notícia válida seja encontrada, os dados em cache já salvos serão retornados, evitando erros.  
-- Foi implementada uma função para que, todos os dias, às 1h25 da manhã, as notícias sejam atualizadas, evitando que o acesso ao site fique lento para algum usuário.  
-- Tempo de resposta (cache): 0.40 ms.  
-- Tempo de resposta (sem cache): 2.0 segundos.  
+### **Servidor**
+- Todas as notícias são armazenadas em **cache**, melhorando o tempo de resposta.
+- As notícias são atualizadas diariamente, às **1h25 da manhã**, para evitar lentidão durante o acesso.
+- **Descrição das notícias**:
+  - Limitada a **300 caracteres** para melhor exibição no front-end.
+  - Todas as notícias devem conter keywords relacionadas às moedas.
+- **Validação de dados**:
+  - Títulos, links e descrições são obrigatoriamente válidos. Caso alguma notícia tenha dados inválidos, ela será ignorada.
+- **Fallback em caso de erro**:
+  - Se nenhuma notícia válida for encontrada, os dados armazenados em cache são retornados, evitando erros para o usuário.
+- **Tempo de resposta**:
+  - Com cache: **0.40 ms**.
+  - Sem cache: **2.0 segundos**.
 
-**Layout**  
-- Todas as imagens e ícones possuem um modo hover que aumenta o tamanho em 1.05 ao passar o mouse por cima.  
-- A largura do box onde as notícias estão se adapta ao tamanho do texto.  
-- Os títulos e descrições também possuem um método hover que aumenta o tamanho em 1.05 quando o usuário passa o mouse.  
-- O campo onde está o link usa o método ```target="_blank"```. Isso significa que, ao clicar no link, será aberta uma aba adicional, mantendo o usuário no site.  
-- A página possui adaptação para dispositivos menores.  
+---
 
-**Página para Dispositivos Menores**  
+### **Layout**
+- **Interatividade visual:**
+  - Todas as imagens e ícones possuem um efeito hover que aumenta o tamanho em **1.05** quando o mouse passa sobre eles.
+  - Títulos e descrições também utilizam o efeito hover, ampliando o texto em **1.05**.
+- **Links:**
+  - Os links para as notícias abrem em uma nova aba (`target="_blank"`), mantendo o usuário no site.
+- **Responsividade:**
+  - A largura dos boxes das notícias se adapta automaticamente ao tamanho do texto.
+  - A página foi projetada para se ajustar perfeitamente a dispositivos menores.
+
+---
+
+### **Página para Dispositivos Menores**
+- O layout é responsivo, garantindo uma boa experiência em telas menores.
 
 ![image](https://github.com/user-attachments/assets/6b061a21-c11e-4a28-bc93-0b56e6d49318)  
 
 ## Página de Cadastro ( / )  
 ![image](https://github.com/user-attachments/assets/1f7cf412-6560-433d-82f3-0cbfc15e89c0)  
+GET, POST ```/cadastro```
+Esta página permite que o usuário cadastre seu email para receber resumos sobre o Bitcoin.
 
-ESta pagina permite o usuario cadastrar o email para receber os email com o resumo do bitcoin
-- /cadastro
-  
+---
 
-**Servidor**  
-- Quando o servidor recebe os dados enviados, ele trata e verifica se os dados são válidos. Caso sejam inválidos, ele retorna um erro que será exibido como popup.  
-- O servidor verifica se o e-mail do usuário já está cadastrado. Se estiver, ele retorna um erro.  
-- Quando os dados são válidos, o servidor retorna o código 200 e inicia uma **Thread** para salvar o usuário na base de dados e enviar o e-mail de boas-vindas.  
-- Quando o usuário é salvo, ele recebe um e-mail de boas-vindas automaticamente.  
-- Tempo de resposta: 0.39 ms.
-  
-**Protecoes**
-- Ao receber os dados, o servidor verifica se o e-mail possui ```@``` e ```.com```.  
-- Ele também verifica se os dados possuem caracteres especiais como ```% * / ( # ` ```. Se possuírem, os dados serão rejeitados.
-- Todos os inputs tem tratamento para a prevencao de qualquer tipo de injecao de codigo, e nada e executado diretamente, evitando falhas comuns como SqlInjection e Xss 
-- O retorno de erros nao e feito diretamente, mais sim retornados erros personalizados evitando assim vazamentos de informacao
+### **Servidor**
+- Quando o servidor recebe os dados enviados, ele:
+  - Trata e verifica se os dados são válidos. Caso sejam inválidos, retorna um erro exibido como popup.
+  - Verifica se o email do usuário já está cadastrado. Se estiver, retorna um erro.
+  - Caso os dados sejam válidos, retorna o código **200** e inicia uma **Thread** para salvar o usuário na base de dados e enviar o email de boas-vindas.
+  - Envia automaticamente o email de boas-vindas após salvar o usuário.
+- **Tempo de resposta**: 0.39 ms.
 
-**Layout**  
-- Adicionado um script em JS que verifica se os dados são válidos antes de enviar para o backend. Caso os dados sejam inválidos, será retornado um erro pelo próprio navegador.  
-- Após o usuário se cadastrar, se a resposta do backend for de sucesso, um popup de sucesso será exibido.  
-- Caso o usuário já esteja cadastrado, o backend informará o erro e será exibido um popup de erro.  
-- Quando o usuário passa o mouse no botão, ele aumenta a escala em 1.05.  
-- Foram colocados placeholders nos campos para maior visibilidade.  
-- Após o popup de sucesso ser exibido, o usuário é redirecionado para a página ```/``` e os inputs são reiniciados.  
-- A página possui adaptação para dispositivos menores.  
+---
 
-**Página para Dispositivos Menores**  
+### **Proteções**
+- O servidor realiza as seguintes verificações:
+  - O email deve conter ```@``` e ```.com```.
+  - Dados com caracteres especiais como ```% * / ( # ` ``` são rejeitados.
+  - Todos os inputs passam por tratamento para prevenir injeção de código, evitando falhas como **SQL Injection** e **XSS**.
+- Os erros são retornados como mensagens personalizadas, evitando vazamento de informações sensíveis.
+
+---
+
+### **Layout**
+- Adicionado um script em JavaScript para validar os dados antes de enviá-los ao backend. Caso sejam inválidos, o próprio navegador exibe um erro.
+- **Após o cadastro:**
+  - Se o backend retornar sucesso, um popup de sucesso é exibido.
+  - Se o usuário já estiver cadastrado, o backend informará o erro, que será exibido em um popup.
+- **Interações visuais:**
+  - O botão aumenta a escala em **1.05** quando o mouse passa sobre ele.
+  - Placeholders foram adicionados aos campos para melhorar a experiência do usuário.
+- **Redirecionamento:**
+  - Após o popup de sucesso, o usuário é redirecionado para a página ```/``` e os inputs são reiniciados.
+- A página foi otimizada para adaptação em dispositivos menores.
+
+---
+
+### **Página para Dispositivos Menores**
+- O layout é responsivo, garantindo usabilidade em telas de diferentes tamanhos.
 
 ![397858933-b27ab07d-c229-492f-92d1-873fa892a1d8](https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21)  
 
