@@ -127,18 +127,18 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 
 ## Pagina Desinscrever
 ![image](https://github.com/user-attachments/assets/711bbaf0-9f00-4d6e-bcc9-130172636cfa)
-## Remoção de Email do Banco de Dados
 
 Esta página permite que o usuário remova seu email do banco de dados.
 
 ### **Servidor**
-- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```).
+- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```), e e enviado atraves de uma Thread.
 - Essa página envia um email e gera um código aleatório de 6 dígitos.
 - Após o envio, verifica-se se o email existe no banco de dados e se é válido.
 - O código gerado possui um timeout de **30 minutos**.
 - Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```).
 - O código é salvo em uma lista de dicionários, onde o email é usado como chave.
 - Verificações realizadas:
+  - As verificacoes Ocorrem no FrontEnd e no Backend
   - Se o email solicitado possui um código gerado. Caso contrário, retorna um erro: ```Código ou Email inválido```.
   - Se o timeout do código é válido e o código está correto. Caso contrário, retorna um erro: ```Código Incorreto```.
   - Se o email existe no banco de dados.
@@ -155,4 +155,16 @@ Esta página permite que o usuário remova seu email do banco de dados.
   - O código só é válido se possuir exatamente 6 caracteres numéricos.
 - **Tratamento de erros:**
   - Todos os erros são retornados em mensagens amigáveis, sem vazamento de informações sensíveis.
+## Layout da Página
 
+### **Layout**
+- O botão possui um efeito **hover** que aumenta a escala em **1.05** quando o mouse passa sobre ele.
+- O popup para inserir o código aparece somente após o backend confirmar que o email é válido e o código foi enviado.
+- O popup de verificação é responsivo e se adapta ao tamanho do conteúdo.
+- Os botões no popup de verificação possuem um efeito **hover** que aumenta a escala em **1.05**.
+- O sistema verifica se o email e o código são válidos.
+- O input do código é validado com **JavaScript**.
+- A mensagem de erro possui um efeito **hover** que a oculta quando o usuário clica no input.
+- Mensagens de erro retornadas pelo backend são exibidas no frontend.
+- Ao clicar no botão "Cancelar", todos os inputs são limpos e a página é reiniciada.
+- O popup final indica sucesso. Quando clicado, o usuário é redirecionado para a página padrão e a página é reiniciada.
