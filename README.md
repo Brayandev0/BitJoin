@@ -137,9 +137,9 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 | **Sucesso**                                                                                     | **Usuário já cadastrado**                                                                      | **Dados Inválidos**  
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------|  
 | <img src="https://github.com/user-attachments/assets/b40f301f-20fc-4c73-ad71-1c2a86438162" alt="Popup Sucesso" width="300" /> | <img src="https://github.com/user-attachments/assets/710ad91f-5884-49b0-8637-80506af83881" alt="Popup Usuário já cadastrado" width="300" /> | <img src="https://github.com/user-attachments/assets/d5e0db0a-e5d1-4039-b8d2-5928ef40c2bb" alt="Pop up dados inválidos" width="300" />  
-<div align="center">
+
 ## Pagina Desinscrever
-</div>
+
 ![image](https://github.com/user-attachments/assets/711bbaf0-9f00-4d6e-bcc9-130172636cfa)
 
 Esta página permite que o usuário remova seu email do banco de dados.
