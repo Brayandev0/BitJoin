@@ -61,7 +61,9 @@ Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da 
 - Quando os dados são válidos, o servidor retorna o código 200 e inicia uma **Thread** para salvar o usuário na base de dados e enviar o e-mail de boas-vindas.  
 - Quando o usuário é salvo, ele recebe um e-mail de boas-vindas automaticamente.  
 - Ao receber os dados, o servidor verifica se o e-mail possui ```@``` e ```.com```.  
-- Ele também verifica se os dados possuem caracteres especiais como ```% * / ( # ` ```. Se possuírem, os dados serão rejeitados.  
+- Ele também verifica se os dados possuem caracteres especiais como ```% * / ( # ` ```. Se possuírem, os dados serão rejeitados.
+- O retorno de erros nao e feito diretamente, mais sim retornados erros personalizados evitando assim vazamentos de informacao
+- Todos os inputs tem tratamento para a prevencao de qualquer tipo de injecao de codigo, e nada e executado diretamente, evitando falhas comuns como SqlInjection e Xss 
 - Tempo de resposta: 0.39 ms.  
 
 **Layout**  
