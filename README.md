@@ -17,8 +17,6 @@ Esta página exibe as cotações mais recentes das moedas.
   - Com cache: **0.40 ms**.
   - Sem cache: **0.65 ms**.
 
----
-
 ### **Layout**
 - **Interatividade visual:**
   - Todos os botões possuem um efeito hover que:
@@ -61,7 +59,6 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
   - Com cache: **0.40 ms**.
   - Sem cache: **2.0 segundos**.
 
----
 
 ### **Layout**
 - **Interatividade visual:**
@@ -100,7 +97,6 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
   - Envia automaticamente o email de boas-vindas após salvar o usuário.
 - **Tempo de resposta**: 0.39 ms.
 
----
 
 ### **Proteções**
 - O servidor realiza as seguintes verificações:
@@ -109,7 +105,6 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
   - Todos os inputs passam por tratamento para prevenir injeção de código, evitando falhas como **SQL Injection** e **XSS**.
 - Os erros nao são retornados diretamente, mas sim com mensagens personalizadas, evitando vazamento de informações sensíveis.
 
----
 
 ### **Layout**
 - Adicionado um script em JavaScript para validar os dados antes de enviá-los ao backend. Caso sejam inválidos, o próprio navegador exibe um erro.
@@ -160,7 +155,6 @@ Esta página permite que o usuário remova seu email do banco de dados.
   - Se o email existe no banco de dados.
   - Se o código tem exatamente 6 dígitos e contém apenas números inteiros.
 
----
 
 ### **Proteções**
 - **Prevenção contra vulnerabilidades:**
