@@ -47,13 +47,14 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
 ---
 
 ### **Servidor**
-- Todas as notícias são armazenadas em **cache**, melhorando o tempo de resposta.
+- Todas as notícias são armazenadas em **cache**,e atualizadas 1 vez ao dia automaticamente,melhorando o tempo de resposta.
 - As notícias são atualizadas diariamente, às **1h25 da manhã**, para evitar lentidão durante o acesso.
+- Nao precisa de interacao dos usuarios para atualizar as noticias
 - **Descrição das notícias**:
   - Limitada a **300 caracteres** para melhor exibição no front-end.
   - Todas as notícias devem conter keywords relacionadas às moedas.
 - **Validação de dados**:
-  - Títulos, links e descrições são obrigatoriamente válidos. Caso alguma notícia tenha dados inválidos, ela será ignorada.
+  - Títulos, links e descrições são obrigatoriamente válidos. Caso alguma notícia tenha dados inválidos, ela será ignorada e sera buscada a proxima.
 - **Fallback em caso de erro**:
   - Se nenhuma notícia válida for encontrada, os dados armazenados em cache são retornados, evitando erros para o usuário.
 - **Tempo de resposta**:
@@ -106,7 +107,7 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
   - O email deve conter ```@``` e ```.com```.
   - Dados com caracteres especiais como ```% * / ( # ` ``` são rejeitados.
   - Todos os inputs passam por tratamento para prevenir injeção de código, evitando falhas como **SQL Injection** e **XSS**.
-- Os erros são retornados como mensagens personalizadas, evitando vazamento de informações sensíveis.
+- Os erros nao são retornados diretamente, mas sim com mensagens personalizadas, evitando vazamento de informações sensíveis.
 
 ---
 
@@ -145,12 +146,12 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 Esta página permite que o usuário remova seu email do banco de dados.
 
 ### **Servidor**
-- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```), e e enviado atraves de uma Thread.
+- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```), e o codigo para o Email e enviado atraves de uma Thread.
+- O BackEnd verifica se o email existe no banco de dados e se é válido antes de realizar o envio.
 - Essa página envia um email e gera um código aleatório de 6 dígitos.
-- Após o envio, verifica-se se o email existe no banco de dados e se é válido.
-- O código gerado possui um timeout de **30 minutos**.
-- Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```).
 - O código é salvo em uma lista de dicionários, onde o email é usado como chave.
+- O código gerado possui um timeout de **30 minutos**.
+- Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```) e verificados, caso tudo esteja correto ele retorna codigo de sucesso 200.
 - Caso o Timeout do codigo solicitado esteja expirado, ele e apagado automaticamente
 - Verificações realizadas:
   - As verificacoes Ocorrem no FrontEnd e no Backend
