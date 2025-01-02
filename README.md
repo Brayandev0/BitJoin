@@ -141,7 +141,7 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 Esta página permite que o usuário remova seu email do banco de dados.
 
 ### **Servidor**
-- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript usando `fetch` (```/EnviarCodigo```), e o codigo para o Email e enviado atraves de uma Thread.
+- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript utilizando metodo ```POST```, e usando `fetch` (```/EnviarCodigo```), e o codigo para o Email e enviado atraves de uma Thread.
 - O BackEnd verifica se o email existe no banco de dados e se é válido antes de realizar o envio.
 - Essa página envia um email e gera um código aleatório de 6 dígitos.
 - O código é salvo em uma lista de dicionários, onde o email é usado como chave.
