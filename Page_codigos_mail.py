@@ -40,7 +40,7 @@ def Verificar_codigo():
                 Remover_da_db(email)
                 return "Sucesso",200
 
-            elif codigos[f"{email}"]["timeout"] > time.time():
+            elif codigos[f"{email}"]["timeout"] < time.time():
                 codigos.pop(f"{email}")
                 return "codigo expirado",403
         return "codigo incorreto",403
