@@ -40,13 +40,13 @@ Esta página exibe as cotações mais recentes das moedas.
 ## Página de Notícias  
 ![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)  
 GET ```/news```
-Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao mercado.
+Esta página exibe e mostra as notícias mais recentes relacionadas as moedas.
 
 ---
 
 ### **Servidor**
-- Todas as notícias são armazenadas em **cache**,e atualizadas 1 vez ao dia automaticamente,melhorando o tempo de resposta.
-- As notícias são atualizadas diariamente, às **1h25 da manhã**, para evitar lentidão durante o acesso.
+- Todas as notícias são armazenadas em **cache**,e atualizadas 1 vez ao dia automaticamente,deixando o tempo de resposta mais rapido.
+- As notícias são atualizadas diariamente, às **1h25 da manhã**, para evitar lentidão durante o acesso do usuario.
 - Nao precisa de interacao dos usuarios para atualizar as noticias
 - **Descrição das notícias**:
   - Limitada a **300 caracteres** para melhor exibição no front-end.
@@ -57,7 +57,7 @@ Esta página exibe e disponibiliza as notícias mais recentes relacionadas ao me
   - Se nenhuma notícia válida for encontrada, os dados armazenados em cache são retornados, evitando erros para o usuário.
 - **Tempo de resposta**:
   - Com cache: **0.40 ms**.
-  - Sem cache: **2.0 segundos**.
+  - Sem cache: **2.1 segundos**.
 
 
 ### **Layout**
@@ -91,7 +91,7 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 
 ### **Servidor**
 - Quando o servidor recebe os dados enviados, ele:
-  - Trata e verifica se os dados são válidos. Caso sejam inválidos, retorna um erro exibido como popup.
+  - Trata e verifica se os dados são válidos. Caso sejam inválidos, retorna um erro que e exibido no front end como popup.
   - Verifica se o email do usuário já está cadastrado. Se estiver, retorna um erro.
   - Caso os dados sejam válidos, retorna o código **200** e inicia uma **Thread** para salvar o usuário na base de dados e enviar o email de boas-vindas.
   - Envia automaticamente o email de boas-vindas após salvar o usuário.
@@ -141,13 +141,13 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 Esta página permite que o usuário remova seu email do banco de dados.
 
 ### **Servidor**
-- Quando o usuário clica em "Continuar", o email é enviado para outra página via JavaScript utilizando metodo ```POST```, e usando `fetch` (```/EnviarCodigo```), e o codigo para o Email e enviado atraves de uma Thread.
+- Quando o usuário clica em "Continuar", o email é enviado para outra página com JavaScript utilizando metodo ```POST```, e usando `fetch` (```/EnviarCodigo```), e o codigo para o Email e enviado atraves de uma Thread.
 - O BackEnd verifica se o email existe no banco de dados e se é válido antes de realizar o envio.
-- Essa página envia um email e gera um código aleatório de 6 dígitos.
+- O BackEnd envia um email e gera um código aleatório de 6 dígitos.
 - O código é salvo em uma lista de dicionários, onde o email é usado como chave.
 - O código gerado possui um timeout de **30 minutos**.
-- Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```) e verificados, caso tudo esteja correto ele retorna codigo de sucesso 200.
-- Caso o Timeout do codigo solicitado esteja expirado, ele e apagado automaticamente
+- Quando o usuário insere o código de verificação, o código e o email são enviados para outra página via `fetch` em JavaScript (```/VerificarCodigo```) com o metodo POST e verificados, caso tudo esteja correto ele retorna codigo de sucesso 200.
+- Caso o Timeout do codigo solicitado esteja expirado, o email e apagado da lista de codigos automaticamente
 - Verificações realizadas:
   - As verificacoes Ocorrem no FrontEnd e no Backend
   - Se o email solicitado possui um código gerado. Caso contrário, retorna um erro: ```Código ou Email inválido```.
@@ -158,7 +158,7 @@ Esta página permite que o usuário remova seu email do banco de dados.
 
 ### **Proteções**
 - **Prevenção contra vulnerabilidades:**
-  - Nenhum dado é passado diretamente, evitando vulnerabilidades como **SQL Injection** e **XSS**.
+  - Nenhum dado é passado diretamente e todos os dados sao tratados, evitando vulnerabilidades como **SQL Injection** e **XSS**.
 - **Validações realizadas:**
   - Todos os campos são tratados e verificados.
   - O email só é considerado válido se possuir ```@```, ```.``` e ```.com``` e tiver mais de 5 caracteres.
