@@ -202,8 +202,7 @@ Esta página permite que o usuário remova seu email do banco de dados.
   
 ### **Página para dispositivos Menores**
 
-</div>
-<div align="center">
+
   <img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="Página menor" />
 </div>
 
@@ -220,8 +219,8 @@ Esta página permite que o usuário remova seu email do banco de dados.
   - O icone e clicavel, e leva para ```https://github.com/Brayandev0```
   - O icone possui um metodo ```hover``` que aumenta o tamanho do icone quando o usuario passa o mouse em cima
 
-### Pagina para dispositivos menores
 <div align="center"> 
+### Pagina para dispositivos menores
   
 ![image](https://github.com/user-attachments/assets/52258162-ffa8-4f96-bf96-940a73cdc9c1)
 </div>
