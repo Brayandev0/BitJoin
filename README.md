@@ -237,7 +237,8 @@ Esta página permite que o usuário remova seu email do banco de dados.
     - O bloco Possui um metodo ```hover```, que quando o usuario passa o mouse em cima ele muda para um tom mais escuro ```(#dcdcdc)``` e aumenta o tamanho do objeto em 1.05
  
 ### Perguntas 
-![image](https://github.com/user-attachments/assets/48e637f4-0586-40bc-a0c7-c6e9af35e8be)
+![image](https://github.com/user-attachments/assets/c7655582-d321-41ce-9560-5798b20da15f)
+
 
 <div align="center"> 
   
