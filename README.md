@@ -220,6 +220,7 @@ Esta página permite que o usuário remova seu email do banco de dados.
   - O icone possui um metodo ```hover``` que aumenta o tamanho do icone quando o usuario passa o mouse em cima
 
 <div align="center"> 
+  
 ### Pagina para dispositivos menores
   
 ![image](https://github.com/user-attachments/assets/52258162-ffa8-4f96-bf96-940a73cdc9c1)
