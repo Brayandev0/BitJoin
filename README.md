@@ -225,3 +225,23 @@ Esta página permite que o usuário remova seu email do banco de dados.
   
 ![image](https://github.com/user-attachments/assets/52258162-ffa8-4f96-bf96-940a73cdc9c1)
 </div>
+
+## Pagina Perguntas Frequentes
+![image](https://github.com/user-attachments/assets/f34e165d-b8d5-4c88-a072-f18af39a9ee0)
+
+### Layout
+- **Bloco de Perguntas**
+   - O bloco de Perguntas tem o seu tamanho adaptado automaticamente para cada pergunta
+   - O bloco possui uma sombra de ```2px```
+- **Perguntas Frequentes**
+    - O bloco Possui um metodo ```hover```, que quando o usuario passa o mouse em cima ele muda para um tom mais escuro ```(#dcdcdc)``` e aumenta o tamanho do objeto em 1.05
+ 
+### Perguntas 
+![image](https://github.com/user-attachments/assets/48e637f4-0586-40bc-a0c7-c6e9af35e8be)
+
+<div align="center"> 
+  
+### Pagina para dispositivos menores
+![image](https://github.com/user-attachments/assets/34d6f265-dbd4-4441-a511-6c393247b841)
+
+</div>
