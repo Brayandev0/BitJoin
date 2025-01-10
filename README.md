@@ -129,6 +129,11 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
 </div>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21" alt="Página menor" />
+
+ ### E-mail de Boas vindas
+![image](https://github.com/user-attachments/assets/0434a4bf-acde-419f-b48f-37c6b74a2a5e)
+
+
 </div>
 
 **Pop-Ups**  
@@ -207,6 +212,10 @@ Esta página permite que o usuário remova seu email do banco de dados.
 
 
   <img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="Página menor" />
+
+### E-Mail com o codigo de verificacao
+![image](https://github.com/user-attachments/assets/e58a691d-64cb-4839-9828-00113044d4c0)
+
 </div>
 
 
