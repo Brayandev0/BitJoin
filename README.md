@@ -39,7 +39,8 @@ Esta página exibe as cotações mais recentes das moedas.
 </div>
 
 ## Página de Notícias  
-![image](https://github.com/user-attachments/assets/69dc51c2-3ff6-45ce-8b5c-dbbecbb8937f)  
+![pagina_noticias](https://github.com/user-attachments/assets/43741849-90fd-4975-8ac0-d9702c682471)
+
 GET ```/news```
 Esta página exibe e mostra as notícias mais recentes relacionadas as moedas.
 
