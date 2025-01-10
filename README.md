@@ -3,8 +3,9 @@ O projeto BitJoin é um site de criptoativos e moedas em geral. O principal obje
 Todos os dias, às 6h25, é enviado a todos os e-mails cadastrados um resumo da cotação do Bitcoin.
 
 ## Página de Cotações  
+![397528187-95978b9c-b052-4ff1-a2ff-8ec2121c2582](https://github.com/user-attachments/assets/fc21f447-575a-4f25-a2c5-3e821da3f1b5)
 
-![image](https://github.com/user-attachments/assets/95978b9c-b052-4ff1-a2ff-8ec2121c2582)  
+
 GET ```/```
 Esta página exibe as cotações mais recentes das moedas.
 
