@@ -131,7 +131,8 @@ Esta página permite que o usuário cadastre seu email para receber resumos sobr
   <img src="https://github.com/user-attachments/assets/25045262-260f-4dea-ab80-626d424a6d21" alt="Página menor" />
 
  ### E-mail de Boas vindas
-  <img style="witdh:150px;height:200px" src="https://github.com/user-attachments/assets/0434a4bf-acde-419f-b48f-37c6b74a2a5e" alt="Email Bem vindo" />
+  ![image](https://github.com/user-attachments/assets/af6d8958-b8fc-4ab1-8ba0-49385a3319e0)
+
 
 
 </div>
