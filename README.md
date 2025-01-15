@@ -36,6 +36,10 @@ Esta página exibe as cotações mais recentes das moedas.
 </div>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0df86306-2436-4a3c-9ae1-8b082e197453" alt="Página menor" />
+  
+### Email Das cotacoes 
+![image](https://github.com/user-attachments/assets/b7c57c84-47ec-43b5-a242-6c5bf70e5bad)
+
 </div>
 
 ## Página de Notícias  
