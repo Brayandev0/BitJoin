@@ -245,7 +245,7 @@ Esta página permite que o usuário remova seu email do banco de dados.
 </div>
 
 ## Pagina Perguntas Frequentes
-![image](https://github.com/user-attachments/assets/f34e165d-b8d5-4c88-a072-f18af39a9ee0)
+![image](https://github.com/user-attachments/assets/6fa7ce64-9ed7-439a-b5ef-441325e34eba)
 
 ### Layout
 - **Bloco de Perguntas**
