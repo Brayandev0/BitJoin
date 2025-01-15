@@ -215,7 +215,8 @@ Esta página permite que o usuário remova seu email do banco de dados.
   <img src="https://github.com/user-attachments/assets/87878610-f1df-43c9-b84f-a522435ec8f7" alt="Página menor" />
 
 ### E-Mail com o codigo de verificacao
-![image](https://github.com/user-attachments/assets/e58a691d-64cb-4839-9828-00113044d4c0)
+![image](https://github.com/user-attachments/assets/ec767439-ffaa-4e18-bd59-042e76b7f67d)
+
 
 </div>
 
