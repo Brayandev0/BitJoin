@@ -146,6 +146,8 @@ footer {
     background: linear-gradient(145deg, #f9f9f9, #e0e0e0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     text-align: center;
+    padding: 0 12px;
+    margin: 0 auto;
     font-size: 1.4em;
     border: 5px solid rgb(65, 112, 56);
     width: 24vw;

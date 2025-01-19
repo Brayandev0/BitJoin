@@ -1,13 +1,11 @@
 
 import datetime
-import flask_limiter 
 import threading
 from flask import Blueprint,request
 import flask_limiter.util
 from Database.database import Usuarios
-import email.message as email
-import smtplib
-from codigos_adicionais.users_secretos import codigo
+import Enviar_email
+
 app = Blueprint("Salvando email",__name__)
 
 
@@ -52,29 +50,9 @@ def Enviar_pra_db(nome : str, email : str):
     Usuarios.create(nome=nome,email=email,inserido_data=datetime.datetime.now().date())
     Funcao_principal(email,nome)
 
-# realiza a conexao do smpt 
-def conectando_smtp():
-    coneccao = smtplib.SMTP("smtp.gmail.com",587,timeout=8)
-    coneccao.starttls()
-    coneccao.login("verificar254@gmail.com",codigo)
-    return coneccao
-
-
-# defini o corpo do email 
-def definindo_corpo_email(addres : str,body_email):
-    corpo_email = email.Message()
-    corpo_email["from"] = "BitJoin verificar254@gmail.com"
-    corpo_email['to'] = addres
-    corpo_email['subject'] = "Seja bem vindo "
-    corpo_email.add_header("Content-Type","text/html")
-    corpo_email.set_payload(body_email,"utf-8")
-    return corpo_email
-
-
 # envia e salva o codigo html 
-def enviar_email_boas_vindas(addres : str, nome : str, coneccao_smtp : smtplib.SMTP):
-
-    body_email = f''' <!DOCTYPE html>
+def Retornar_corpo_email(nome : str,):
+    return f''' <!DOCTYPE html>
     
 <html lang="pt-BR">
 <head>
@@ -166,17 +144,9 @@ def enviar_email_boas_vindas(addres : str, nome : str, coneccao_smtp : smtplib.S
 </html>
 '''
 
-    try:
-        coneccao_smtp.sendmail("verificar254@gmail.com",addres,definindo_corpo_email(addres,body_email).as_string()) 
-    except Exception as e :
-        print("erro",e)
-
-
 
 ## realiza o envio do email de boas vindas 
 def Funcao_principal(email : str,nome : str):
         with threading.Lock(): # trava a execucao dupla do codigo 
-            conecao_smtp = conectando_smtp()
-            enviar_email_boas_vindas(email,nome,conecao_smtp)
-            conecao_smtp.quit()
+            Enviar_email.Send_mails(email=email,corpo_email=Retornar_corpo_email(nome),titulo="Seja bem vindo ao servico bitjoin")
 

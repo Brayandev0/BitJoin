@@ -1,15 +1,9 @@
-
-import datetime
-import os
+import Enviar_email
 import random
-import sys
 import threading
 import time
 from flask import Blueprint,request
-
 from Database.database import Usuarios
-import email.message as email
-import smtplib
 from codigos_adicionais.users_secretos import codigo
 app = Blueprint("codigos",__name__)
 codigos = {} # type:ignore
@@ -83,29 +77,10 @@ def verificar_email(email : str):
         return True
     return False
 
-# realiza a conexao do smpt 
-def conectando_smtp():
-    coneccao = smtplib.SMTP("smtp.gmail.com",587,timeout=8)
-    coneccao.starttls()
-    coneccao.login("verificar254@gmail.com",codigo)
-    return coneccao
-
-
-# defini o corpo do email 
-def definindo_corpo_email(addres : str,body_email):
-    corpo_email = email.Message()
-    corpo_email["from"] = "BitJoin verificar254@gmail.com"
-    corpo_email['to'] = addres
-    corpo_email['subject'] = "Confirmação de solicitação"
-    corpo_email.add_header("Content-Type","text/html")
-    corpo_email.set_payload(body_email,"utf-8")
-    return corpo_email
-
-
 # envia e salva o codigo html 
-def Enviar_codigo_email(addres : str, nome : str, coneccao_smtp : smtplib.SMTP):
+def Return_body_mail(addres : str, nome : str):
 
-    body_email = f''' <!DOCTYPE html>
+    return f''' <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -196,20 +171,11 @@ def Enviar_codigo_email(addres : str, nome : str, coneccao_smtp : smtplib.SMTP):
 
 '''
 
-    try:
-        coneccao_smtp.sendmail("verificar254@gmail.com",addres,definindo_corpo_email(addres,body_email).as_string()) 
-
-    except Exception as e :
-        print("erro",e)
-
-
-
 ## realiza o envio do email de boas vindas 
 def Funcao_principal(email : str,nome : str):
         with threading.Lock(): # trava a execucao dupla do codigo 
-            conecao_smtp = conectando_smtp()
-            Enviar_codigo_email(addres=email,nome=nome,coneccao_smtp=conecao_smtp)
-            conecao_smtp.quit()
+            Enviar_email.Send_mails(email,Return_body_mail(),"Codigo solicitado")
+
 
 
 ##gera e retorna o codigo de 6 digitos 
