@@ -1,5 +1,3 @@
-## 1.0.1
-Todos os Erros que ocorrerem no smtp sera escritos em um arquivo de logs de erros melhorando a transparencia de erros, a melhoria na reutilizacao do codigo tambem foi adicionada
 
 ## Introdução  
 O projeto BitJoin é um site de criptoativos e moedas em geral. O principal objetivo do site BitJoin é fornecer as principais cotações e notícias sobre as principais criptomoedas, informando dentro do site e por e-mail.  
@@ -267,3 +265,6 @@ Esta página permite que o usuário remova seu email do banco de dados.
 ![image](https://github.com/user-attachments/assets/34d6f265-dbd4-4441-a511-6c393247b841)
 
 </div>
+
+##Versao 1.0.1
+Todos os Erros que ocorrerem no smtp sera escritos em um arquivo de logs de erros melhorando a transparencia de erros, a melhoria na reutilizacao do codigo tambem foi adicionada
