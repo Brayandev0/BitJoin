@@ -266,5 +266,5 @@ Esta página permite que o usuário remova seu email do banco de dados.
 
 </div>
 
-##Versao 1.0.1
+## Versao 1.0.1
 Todos os Erros que ocorrerem no smtp sera escritos em um arquivo de logs de erros melhorando a transparencia de erros, a melhoria na reutilizacao do codigo tambem foi adicionada
